@@ -65,14 +65,10 @@ class pasajeCliente{
     }
 }
 
-const usuario = new pasajeCliente(prompt("Ingrese nombre completo.").toLocaleLowerCase(),prompt("Ingrese apellido.").toLocaleLowerCase(),parseInt(prompt("Ingrese su Dni.")),prompt("Ingrese provincia residente.").toLocaleLowerCase(),prompt("Ingrese localidad residente.").toLocaleLowerCase(),prompt("Ingrese codigo postal.").toLocaleLowerCase(),prompt("Ingrese nacionalidad.").toLocaleLowerCase(),prompt("Ingrese fecha actual en formato aa/bb/cccc").toLocaleLowerCase());
-
-
-console.log(usuario);
+const usuario = new pasajeCliente(prompt("Ingrese nombre completo.").toLocaleLowerCase(),prompt("Ingrese apellido.").toLocaleLowerCase(),parseInt(prompt("Ingrese su DNI.")),prompt("Ingrese provincia residente.").toLocaleLowerCase(),prompt("Ingrese localidad residente.").toLocaleLowerCase(),prompt("Ingrese codigo postal.").toLocaleLowerCase(),prompt("Ingrese nacionalidad.").toLocaleLowerCase(),prompt("Ingrese fecha actual en formato aa/bb/cccc").toLocaleLowerCase());
 
 usuario.mayorEdad(43000000)
 usuario.nacionalidadPasajero();
-
 
 
 let total;
@@ -87,18 +83,12 @@ alert(salida4);
 alert(`Felicitaciones (${usuario.nombrePasajero} ${usuario.apellidoPasajero}), su pago se ha adquirido con éxito. Muchas gracias por elegirnos, a continuacion le llegara su pasaporte!`);
 
 const viajeUsuario = [];
-const pepa = [];
+const datosUsuario = [];
 
 viajeUsuario.push(viajeResultado);
-pepa.push(usuario);
+datosUsuario.push(usuario);
 
-let salida5="";
-let salida6="";
-
-viajeUsuario.forEach(viaje =>{salida5+=`Destino : ${viaje.destino}. \n Duracion = ${viaje.duracion}. Boleto : ${viaje.boleto}. \n Hospedaje : ${viaje.hospedaje} \n Precio : $${viaje.precio}. \n Zona = ${viaje.zona}. \n\n`});
-pepa.forEach(datos=>{salida6+=`Nombre : ${datos.nombrePasajero}. \n Apellido : ${datos.apellidoPasajero}. DNI : ${datos.dni}. \n Provincia : ${datos.provincia} \n Localidad : ${datos.localidad}. \n Codigo Postal : ${datos.codigoPostal}. \n Nacionalidad: ${datos.nacionalidad}. \n Fecha ingresada: ${datos.fechaIngresada}. \n`});
-
-let salidaFinal = salida5 + salida6;
+salidaFinal= `${viajeSeleccionado()} \n ${datosUsuarViaje()}`
 
 alert(`(PASAPORTE DEFILIPPI SPACETOUR) \n\n ${salidaFinal} \n`);
 

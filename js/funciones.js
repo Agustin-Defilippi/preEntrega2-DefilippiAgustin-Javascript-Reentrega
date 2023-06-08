@@ -1,4 +1,3 @@
-
 const eleccionZona = () =>{
 
     while ((paqueteViaje !=="norte") && (paqueteViaje !=="centro") && (paqueteViaje !=="sur")){
@@ -34,7 +33,7 @@ const recorridoDestino = () =>{
     let salida2="";
 
     for (const elemento in viajeResultado) {
-        salida2+= elemento+" "+viajeResultado[elemento]+`\n`;
+        salida2+= elemento+":"+" "+viajeResultado[elemento]+"."+`\n`;
     }
 
     return salida2;
@@ -56,3 +55,21 @@ const formaDePago = (pago, valor) => {
   
     return totalValor;
 }
+
+const viajeSeleccionado = () =>{
+    let salida5="";
+  
+    viajeUsuario.forEach(viaje =>{salida5+=`Destino : ${viaje.destino}. \n Duracion = ${viaje.duracion}. Boleto : ${viaje.boleto}. \n Hospedaje : ${viaje.hospedaje} \n Precio : $${viaje.precio}. \n Zona = ${viaje.zona}. \n\n`});
+  
+    return salida5;
+}
+  
+  
+const datosUsuarViaje = () =>{
+    let salida6="";
+  
+    datosUsuario.forEach(datos=>{salida6+=`Nombre : ${datos.nombrePasajero}. \n Apellido : ${datos.apellidoPasajero}. DNI : ${datos.dni}. \n Provincia : ${datos.provincia} \n Localidad : ${datos.localidad}. \n Codigo Postal : ${datos.codigoPostal}. \n Nacionalidad: ${datos.nacionalidad}. \n Fecha ingresada: ${datos.fechaIngresada}. \n`});
+  
+    return salida6;
+}
+  
